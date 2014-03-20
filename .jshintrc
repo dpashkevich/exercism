@@ -1,4 +1,5 @@
 {
+    "node": true,
     "curly": true,
     "eqeqeq": false,
     "immed": false,       // don't be bothered by IIF syntax
