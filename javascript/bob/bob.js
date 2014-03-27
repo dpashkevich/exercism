@@ -1,5 +1,4 @@
 "use strict";
-var XRegExp = require('./xregexp');
 
 /**
  * Tone detector helper. I would put that in a separate file
@@ -19,8 +18,8 @@ var ToneDetector = {
             return s.length && s[s.length -1] === '?';
         },
         yell: function(s) {
-            // if the string contains at least one letter
-            return XRegExp('\\p{L}+').test(s) && s.toUpperCase() === s;
+            // if the string contains at least one letter and it is uppercased
+            return s.toUpperCase() === s && s.toLowerCase() !== s;
         }
     },
 
